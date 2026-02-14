@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanket Rajput | Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --accent:#6cf2c2;
+  --accent2:#7aa2ff;
+  --text:#e8ecff;
+  --muted:#cbd5ff;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Poppins,system-ui;
+  background:#0b0f1a;
+  color:var(--text);
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:30px 20px;
+}
+
+header{
+  text-align:center;
+  margin-bottom:40px;
+}
+header h1{
+  margin:0;
+  font-size:42px;
+}
+header p{
+  color:var(--muted);
+  margin-top:8px;
+}
+
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+.project{
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:22px;
+  padding:22px;
+  backdrop-filter:blur(12px);
+  transition:.3s ease;
+}
+.project:hover{
+  transform:translateY(-8px);
+}
+
+.project h3{
+  margin:0 0 10px;
+}
+.project p{
+  margin:0;
+  font-size:14px;
+  color:var(--muted);
+}
+
+.project a{
+  display:inline-block;
+  margin-top:16px;
+  padding:10px 18px;
+  border-radius:16px;
+  font-weight:600;
+  text-decoration:none;
+  color:#081016;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+}
+
+.back{
+  text-align:center;
+  margin-top:50px;
+}
+
+.back a{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:600;
+}
+
+footer{
+  text-align:center;
+  margin:40px 0 10px;
+  color:var(--muted);
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+  <h1>My Portfolio</h1>
+  <p>Projects • Practice • Learning Journey</p>
+</header>
+
+<section class="projects">
+
+  <div class="project">
+    <h3>Profile Website</h3>
+    <p>Animated profile website with video background and glassmorphism UI.</p>
+    <a href="index.html">View Project</a>
+  </div>
+
+  <div class="project">
+    <h3>HTML Practice</h3>
+    <p>Basic HTML elements, forms, tables and layouts practice.</p>
+    <a href="#">View</a>
+  </div>
+
+  <div class="project">
+    <h3>CSS Designs</h3>
+    <p>Glass UI, gradients, animations and responsive cards.</p>
+    <a href="#">View</a>
+  </div>
+
+  <div class="project">
+    <h3>JavaScript Basics</h3>
+    <p>DOM manipulation, click events and animations.</p>
+    <a href="#">View</a>
+  </div>
+
+</section>
+
+<div class="back">
+  <a href="index.html">← Back to Profile</a>
+</div>
+
+<footer>
+  © 2026 Sanket Rajput • Learning & Building 🚀
+</footer>
+
+</div>
+
+</body>
+</html>
