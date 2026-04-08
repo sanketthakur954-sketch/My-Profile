@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Saurabh Yadav - Resume</title>
+    <style>
+        /* A4 Size Setup */
+        @page { size: A4; margin: 0; }
+        * { box-sizing: border-box; -webkit-print-color-adjust: exact; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f0f0; }
+
+        .resume-page {
+            width: 210mm;
+            height: 297mm;
+            background: white;
+            display: flex;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Top Header Background */
+        .top-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 320px;
+            background-color: #d9ccc6; /* Light Taupe */
+            z-index: 1;
+        }
+
+        /* Left Column (Sidebar) */
+        .sidebar {
+            width: 40%;
+            background-color: #b19d98; /* Darker Taupe */
+            color: white;
+            padding: 50px 35px;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-pic {
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            border: 6px solid white;
+            margin: 0 auto 50px;
+            overflow: hidden;
+            background-color: #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .side-section { margin-bottom: 40px; }
+        .side-title {
+            font-size: 17px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            letter-spacing: 1.5px;
+        }
+        .side-text { font-size: 13.5px; line-height: 1.6; color: #f4f4f4; }
+
+        /* Right Column (Main Content) */
+        .main-content {
+            width: 60%;
+            padding: 60px 45px;
+            z-index: 2;
+            margin-top: 40px;
+        }
+
+        .name-box { margin-bottom: 90px; }
+        .name-box h1 {
+            font-size: 52px;
+            margin: 0;
+            line-height: 0.9;
+            text-transform: uppercase;
+            color: #2d2d2d;
+            letter-spacing: 1px;
+        }
+        .name-box p {
+            font-size: 22px;
+            margin: 12px 0 0;
+            color: #555;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .main-section { margin-bottom: 35px; }
+        .main-title {
+            display: flex;
+            align-items: center;
+            font-size: 17px;
+            font-weight: bold;
+            color: #2d2d2d;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+        }
+        .main-title span {
+            color: #b19d98;
+            font-size: 26px;
+            margin-right: 12px;
+            font-weight: 900;
+        }
+
+        .entry { margin-bottom: 22px; }
+        .entry-head { font-weight: bold; font-size: 14.5px; margin: 0; text-transform: uppercase; color: #333; }
+        .entry-sub { font-size: 13px; color: #666; margin: 3px 0; }
+        .entry-marks { font-size: 13px; color: #b19d98; font-weight: bold; }
+
+        .declaration { font-size: 13px; line-height: 1.6; color: #555; margin-top: 30px; }
+        .sig-box {
+            margin-top: 50px;
+            border-top: 1px solid #ddd;
+            width: 200px;
+            padding-top: 8px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="resume-page">
+    <div class="top-bg"></div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="profile-pic">
+            <!-- आपकी फोटो यहाँ सेट कर दी गई है -->
+            <img src="op.png" alt="Saurabh Yadav">
+        </div>
+
+        <div class="side-section">
+            <div class="side-title">PROFILE</div>
+            <div class="side-text">
+                I am a responsible and orderly person. I am looking forward to my first work experience where I can utilize my education and contribute to organizational growth.
+            </div>
+        </div>
+
+        <div class="side-title">CONTACT ME</div>
+        <div class="side-text">
+            📞 6260273753<br>
+            ✉️ saurabhyadav4395@gmail.com<br>
+            📍 237, Sadapara, Charbhatha,<br>&nbsp; Dist - Kanker, Chhattisgarh - 494337
+        </div>
+
+        <div class="side-section" style="margin-top:40px;">
+            <div class="side-title">PERSONAL DETAILS</div>
+            <div class="side-text">
+                <b>Father:</b> Mr. Biselal Yadav<br>
+                <b>Mother:</b> Mrs. Purnima Yadav<br>
+                <b>DOB:</b> 11/03/2002<br>
+                <b>Nationality:</b> Indian
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="name-box">
+            <h1>SAURABH<br>YADAV</h1>
+            <p>Fresher</p>
+        </div>
+
+        <div class="main-section">
+            <div class="main-title"><span>›</span> EDUCATION</div>
+            
+            <div class="entry">
+                <p class="entry-head">Bachelor of Arts (B.A.)</p>
+                <p class="entry-sub">S. M. K. Vishwavidyalaya, Bastar | 2023</p>
+                <p class="entry-marks">Marks: 1011 / 1800 (56.16%)</p>
+            </div>
+
+            <div class="entry">
+                <p class="entry-head">Higher Secondary (12th)</p>
+                <p class="entry-sub">C.G.B.S.E., Raipur | 2020</p>
+                <p class="entry-marks">Marks: 239 / 500 (47.8%)</p>
+            </div>
+
+            <div class="entry">
+                <p class="entry-head">High School (10th)</p>
+                <p class="entry-sub">C.G.B.S.E., Raipur | 2018</p>
+                <p class="entry-marks">Marks: 291 / 600 (48.5%)</p>
+            </div>
+        </div>
+
+        <div class="main-section">
+            <div class="main-title"><span>›</span> LANGUAGE</div>
+            <p class="entry-sub" style="font-size: 15px; color:#333;">Hindi</p>
+        </div>
+
+        <div class="main-section">
+            <div class="main-title"><span>›</span> DECLARATION</div>
+            <p class="declaration">
+                I hereby declare that all the information provided above is true and correct to the best of my knowledge and belief.
+            </p>
+            <div class="sig-box">(Saurabh Kumar Yadav)</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
