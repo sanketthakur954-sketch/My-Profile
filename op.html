@@ -2,212 +2,183 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Saurabh Yadav - Resume</title>
+    <title>BIODATA - Saurabh Kumar Yadav</title>
     <style>
-        /* A4 Size Setup */
         @page { size: A4; margin: 0; }
         * { box-sizing: border-box; -webkit-print-color-adjust: exact; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f0f0; }
+        
+        body { 
+            font-family: 'Arial Black', 'Arial', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #fff;
+        }
 
-        .resume-page {
+        .page {
             width: 210mm;
             height: 297mm;
-            background: white;
-            display: flex;
+            padding: 25mm;
             margin: 0 auto;
             position: relative;
-            overflow: hidden;
         }
 
-        /* Top Header Background */
-        .top-bg {
+        .header {
+            text-align: center;
+            font-weight: 900;
+            text-decoration: underline;
+            font-size: 24px;
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .info-table { width: 80%; }
+
+        .row {
+            display: flex;
+            margin-bottom: 10px;
+            align-items: flex-start;
+        }
+
+        .label {
+            width: 220px;
+            font-weight: 900;
+            font-size: 16px;
+        }
+
+        .colon {
+            width: 40px;
+            font-weight: 900;
+            font-size: 16px;
+        }
+
+        .value {
+            flex: 1;
+            font-weight: 900;
+            font-size: 16px;
+        }
+
+        /* Photo Frame like Friend's Bio */
+        .photo-box {
+            width: 120px;
+            height: 150px;
+            border: 2px solid #000;
+            padding: 2px;
             position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 320px;
-            background-color: #d9ccc6; /* Light Taupe */
-            z-index: 1;
+            top: 100px;
+            right: 60px;
         }
 
-        /* Left Column (Sidebar) */
-        .sidebar {
-            width: 40%;
-            background-color: #b19d98; /* Darker Taupe */
-            color: white;
-            padding: 50px 35px;
-            z-index: 3;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .profile-pic {
-            width: 190px;
-            height: 190px;
-            border-radius: 50%;
-            border: 6px solid white;
-            margin: 0 auto 50px;
-            overflow: hidden;
-            background-color: #eee;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .profile-pic img {
+        .photo-box img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        .side-section { margin-bottom: 40px; }
-        .side-title {
-            font-size: 17px;
-            font-weight: bold;
-            text-transform: uppercase;
-            border-bottom: 1px solid rgba(255,255,255,0.3);
-            padding-bottom: 5px;
+        .section-title {
+            font-weight: 900;
+            margin-top: 50px;
             margin-bottom: 15px;
-            letter-spacing: 1.5px;
-        }
-        .side-text { font-size: 13.5px; line-height: 1.6; color: #f4f4f4; }
-
-        /* Right Column (Main Content) */
-        .main-content {
-            width: 60%;
-            padding: 60px 45px;
-            z-index: 2;
-            margin-top: 40px;
+            font-size: 16px;
+            text-decoration: underline;
         }
 
-        .name-box { margin-bottom: 90px; }
-        .name-box h1 {
-            font-size: 52px;
-            margin: 0;
-            line-height: 0.9;
-            text-transform: uppercase;
-            color: #2d2d2d;
-            letter-spacing: 1px;
-        }
-        .name-box p {
-            font-size: 22px;
-            margin: 12px 0 0;
-            color: #555;
-            letter-spacing: 4px;
-            text-transform: uppercase;
+        table {
+            width: 100%;
+            border: 2px solid #000;
+            border-collapse: collapse;
+            margin-bottom: 50px;
         }
 
-        .main-section { margin-bottom: 35px; }
-        .main-title {
-            display: flex;
-            align-items: center;
-            font-size: 17px;
-            font-weight: bold;
-            color: #2d2d2d;
-            margin-bottom: 18px;
-            text-transform: uppercase;
-        }
-        .main-title span {
-            color: #b19d98;
-            font-size: 26px;
-            margin-right: 12px;
+        th, td {
+            border: 2px solid #000;
+            padding: 10px;
+            text-align: center;
+            font-size: 15px;
             font-weight: 900;
         }
 
-        .entry { margin-bottom: 22px; }
-        .entry-head { font-weight: bold; font-size: 14.5px; margin: 0; text-transform: uppercase; color: #333; }
-        .entry-sub { font-size: 13px; color: #666; margin: 3px 0; }
-        .entry-marks { font-size: 13px; color: #b19d98; font-weight: bold; }
+        .dec-header {
+            text-align: center;
+            font-weight: 900;
+            text-decoration: underline;
+            margin-bottom: 15px;
+            font-size: 17px;
+            margin-top: 40px;
+        }
 
-        .declaration { font-size: 13px; line-height: 1.6; color: #555; margin-top: 30px; }
-        .sig-box {
-            margin-top: 50px;
-            border-top: 1px solid #ddd;
-            width: 200px;
-            padding-top: 8px;
-            font-weight: bold;
-            font-size: 14px;
+        .dec-text {
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 70px;
+            font-weight: 900;
+            line-height: 1.4;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 900;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
 
-<div class="resume-page">
-    <div class="top-bg"></div>
+<div class="page">
+    <div class="header">BIODATA</div>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="profile-pic">
-            <!-- आपकी फोटो यहाँ सेट कर दी गई है -->
-            <img src="op.jpg" alt="Saurabh Yadav">
+    <div class="main-container">
+        <div class="info-table">
+            <div class="row"><div class="label">NAME</div><div class="colon">:</div><div class="value">SAURABH KUMAR YADAV</div></div>
+            <div class="row"><div class="label">FATHER'S NAME</div><div class="colon">:</div><div class="value">MR. BISELAL YADAV</div></div>
+            <div class="row"><div class="label">MOTHER'S NAME</div><div class="colon">:</div><div class="value">MRS. PURNIMA YADAV</div></div>
+            <div class="row"><div class="label">DATE OF BIRTH</div><div class="colon">:</div><div class="value">11.03.2002</div></div>
+            <div class="row"><div class="label">SEX</div><div class="colon">:</div><div class="value">MALE</div></div>
+            <div class="row"><div class="label">NATIONALITY</div><div class="colon">:</div><div class="value">INDIAN</div></div>
+            <div class="row"><div class="label">LANGUAGE KNOWN</div><div class="colon">:</div><div class="value">HINDI</div></div>
+            <div class="row"><div class="label">MARITAL STATUS</div><div class="colon">:</div><div class="value">UNMARRIED</div></div>
+            <div class="row"><div class="label">PERMANENT ADDRESS</div><div class="colon">:</div><div class="value">VILL – CHARBHATHA, POST – CHARBHATHA,<br>TAH – CHARAMA, DIST – KANKER (C.G.)</div></div>
+            <div class="row"><div class="label">CONTACT NO.</div><div class="colon">:</div><div class="value">6260273753</div></div>
+            <div class="row"><div class="label">EMAIL ID</div><div class="colon">:</div><div class="value" style="text-transform: lowercase;">saurabhyadav4395@gmail.com</div></div>
         </div>
 
-        <div class="side-section">
-            <div class="side-title">PROFILE</div>
-            <div class="side-text">
-                I am a responsible and orderly person. I am looking forward to my first work experience where I can utilize my education and contribute to organizational growth.
-            </div>
-        </div>
-
-        <div class="side-title">CONTACT ME</div>
-        <div class="side-text">
-            📞 6260273753<br>
-            ✉️ saurabhyadav4395@gmail.com<br>
-            📍 237, Sadapara, Charbhatha,<br>&nbsp; Dist - Kanker, Chhattisgarh - 494337
-        </div>
-
-        <div class="side-section" style="margin-top:40px;">
-            <div class="side-title">PERSONAL DETAILS</div>
-            <div class="side-text">
-                <b>Father:</b> Mr. Biselal Yadav<br>
-                <b>Mother:</b> Mrs. Purnima Yadav<br>
-                <b>DOB:</b> 11/03/2002<br>
-                <b>Nationality:</b> Indian
-            </div>
+        <div class="photo-box">
+            <img src="op.jpg" alt="Saurabh">
         </div>
     </div>
 
-    <!-- Main Content -->
-    <div class="main-content">
-        <div class="name-box">
-            <h1>SAURABH<br>KUMAR<br>YADAV</h1>
-            <p>Fresher</p>
-        </div>
+    <div class="section-title">➤ EDUCATIONAL QUALIFICATION :</div>
 
-        <div class="main-section">
-            <div class="main-title"><span>›</span> EDUCATION</div>
-            
-            <div class="entry">
-                <p class="entry-head">Bachelor of Arts (B.A.)</p>
-                <p class="entry-sub">S. M. K. Vishwavidyalaya, Bastar | 2023</p>
-                <p class="entry-marks">Marks: 1011 / 1800 (56.16%)</p>
-            </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Class</th>
+                <th>Board / University</th>
+                <th>Year</th>
+                <th>Total Marks / Out of</th>
+                <th>Percent</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>10<sup>th</sup></td><td>C.G.B.S.E., RAIPUR</td><td>2018</td><td>291 / 600</td><td>48.5%</td></tr>
+            <tr><td>12<sup>th</sup></td><td>C.G.B.S.E., RAIPUR</td><td>2020</td><td>239 / 500</td><td>47.8%</td></tr>
+            <tr><td>B.A.</td><td>S. M. K. VISHWAVIDYALAYA</td><td>2023</td><td>1011 / 1800</td><td>56.16%</td></tr>
+        </tbody>
+    </table>
 
-            <div class="entry">
-                <p class="entry-head">Higher Secondary (12th)</p>
-                <p class="entry-sub">C.G.B.S.E., Raipur | 2020</p>
-                <p class="entry-marks">Marks: 239 / 500 (47.8%)</p>
-            </div>
+    <div class="dec-header">DECLARATION :</div>
+    <div class="dec-text">
+        I hereby declare that the above mentioned particulars are true to my knowledge and belief.
+    </div>
 
-            <div class="entry">
-                <p class="entry-head">High School (10th)</p>
-                <p class="entry-sub">C.G.B.S.E., Raipur | 2018</p>
-                <p class="entry-marks">Marks: 291 / 600 (48.5%)</p>
-            </div>
-        </div>
-
-        <div class="main-section">
-            <div class="main-title"><span>›</span> LANGUAGE</div>
-            <p class="entry-sub" style="font-size: 15px; color:#333;">Hindi</p>
-        </div>
-
-        <div class="main-section">
-            <div class="main-title"><span>›</span> DECLARATION</div>
-            <p class="declaration">
-                I hereby declare that all the information provided above is true and correct to the best of my knowledge and belief.
-            </p>
-            <div class="sig-box">(Saurabh Kumar Yadav)</div>
-        </div>
+    <div class="footer">
+        <div>DATE - 08.04.2026<br>Place - Charama</div>
+        <div>(Saurabh Kumar Yadav)</div>
     </div>
 </div>
 
