@@ -1,227 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>COPA Presentation</title>
-
+<title>COPA PPT Guide</title>
 <style>
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #0f172a, #020617);
-    color: white;
-    overflow: hidden;
+body{
+    margin:0;
+    font-family:Arial;
+    background:#0f172a;
+    color:white;
 }
 
-.slide {
-    display: none;
-    height: 100vh;
-    padding: 50px;
-    box-sizing: border-box;
+.container{
+    display:flex;
+    height:100vh;
 }
 
-.active {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    animation: slideFade 0.8s;
+.left{
+    width:50%;
+    padding:40px;
+    overflow-y:auto;
 }
 
-@keyframes slideFade {
-    from {opacity: 0; transform: translateX(100px);}
-    to {opacity: 1; transform: translateX(0);}
+.right{
+    width:50%;
+    background:#020617;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
-.text {
-    width: 50%;
+img{
+    width:80%;
+    border-radius:15px;
 }
 
-.image {
-    width: 45%;
+h1{
+    color:#22c55e;
 }
 
-.image img {
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(34,197,94,0.6);
-    transition: 0.5s;
-}
-
-.image img:hover {
-    transform: scale(1.05);
-}
-
-h1 {
-    font-size: 48px;
-    color: #22c55e;
-}
-
-h2 {
-    font-size: 36px;
-}
-
-ul {
-    font-size: 22px;
-    line-height: 1.8;
-}
-
-.nav {
-    position: fixed;
-    bottom: 20px;
-    width: 100%;
-    text-align: center;
-}
-
-button {
-    padding: 12px 25px;
-    margin: 10px;
-    font-size: 18px;
-    border: none;
-    background: #22c55e;
-    color: black;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #16a34a;
+button{
+    padding:10px 20px;
+    margin-top:20px;
+    background:#22c55e;
+    border:none;
+    cursor:pointer;
 }
 </style>
 </head>
 
 <body>
 
-<!-- Slide 1 -->
-<div class="slide active">
-    <div class="text">
-        <h1>What is COPA Trade</h1>
-        <p>Presented by: Your Name</p>
+<div class="container">
+    
+    <div class="left">
+        <h1 id="title">Slide 1: Title Slide</h1>
+        <p id="content"></p>
+        <button onclick="next()">Next Step</button>
     </div>
-    <div class="image">
-        <img src="https://images.unsplash.com/photo-1581091215367-59ab6b6c64d9">
-    </div>
-</div>
 
-<!-- Slide 2 -->
-<div class="slide">
-    <div class="text">
-        <h2>Introduction</h2>
-        <ul>
-            <li>COPA ka full form Computer Operator and Programming Assistant hai</li>
-            <li>Ye ITI ka ek important trade hai</li>
-            <li>Isme computer aur programming basics sikhaye jate hai</li>
-        </ul>
+    <div class="right">
+        <img id="image" src="">
     </div>
-    <div class="image">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
-    </div>
-</div>
 
-<!-- Slide 3 -->
-<div class="slide">
-    <div class="text">
-        <h2>Skills You Learn</h2>
-        <ul>
-            <li>Basic Programming (C, HTML)</li>
-            <li>Typing aur Data Entry</li>
-            <li>MS Office (Word, Excel)</li>
-            <li>Internet ka use</li>
-        </ul>
-    </div>
-    <div class="image">
-        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
-    </div>
-</div>
-
-<!-- Slide 4 -->
-<div class="slide">
-    <div class="text">
-        <h2>Subjects</h2>
-        <ul>
-            <li>C Programming</li>
-            <li>HTML & Web Design</li>
-            <li>MS Office</li>
-            <li>Operating System</li>
-        </ul>
-    </div>
-    <div class="image">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-    </div>
-</div>
-
-<!-- Slide 5 -->
-<div class="slide">
-    <div class="text">
-        <h2>Career Opportunities</h2>
-        <ul>
-            <li>Computer Operator</li>
-            <li>Data Entry Operator</li>
-            <li>Office Assistant</li>
-        </ul>
-    </div>
-    <div class="image">
-        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
-    </div>
-</div>
-
-<!-- Slide 6 -->
-<div class="slide">
-    <div class="text">
-        <h2>Advantages</h2>
-        <ul>
-            <li>Short duration course</li>
-            <li>Easy to learn</li>
-            <li>Job oriented course</li>
-        </ul>
-    </div>
-    <div class="image">
-        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
-    </div>
-</div>
-
-<!-- Slide 7 -->
-<div class="slide">
-    <div class="text">
-        <h1>Thank You</h1>
-    </div>
-    <div class="image">
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-    </div>
-</div>
-
-<div class="nav">
-    <button onclick="prev()">⬅ Prev</button>
-    <button onclick="next()">Next ➡</button>
 </div>
 
 <script>
-let index = 0;
-const slides = document.querySelectorAll(".slide");
+let step = 0;
 
-function show(i){
-    slides.forEach(s => s.classList.remove("active"));
-    slides[i].classList.add("active");
+const data = [
+{
+title:"Slide 1: Title Slide",
+content:`PPT me likho:
+"What is COPA Trade"
+
+Design:
+- Background dark blue rakho
+- Title center me rakho
+- Niche apna naam likho
+
+Animation:
+- Title → Zoom
+- Name → Fade
+
+Kaise kare:
+PowerPoint → Animations → Zoom select karo`,
+img:"https://images.unsplash.com/photo-1581091215367-59ab6b6c64d9"
+},
+
+{
+title:"Slide 2: Introduction",
+content:`Likho:
+COPA ka full form Computer Operator and Programming Assistant hai.
+Ye ITI ka ek trade hai.
+
+Design:
+- Left text, right image
+- 3 lines se jyada mat likho
+
+Animation:
+- Har line ko alag Fade karo`,
+img:"https://images.unsplash.com/photo-1518770660439-4636190af475"
+},
+
+{
+title:"Slide 3: Skills",
+content:`Likho:
+- Programming
+- Typing
+- MS Office
+- Internet
+
+Design:
+- Bullet points use karo
+
+Animation:
+- Appear → one by one`,
+img:"https://images.unsplash.com/photo-1555066931-4365d14bab8c"
+},
+
+{
+title:"Slide 4: Jobs",
+content:`Likho:
+- Data Entry Operator
+- Computer Operator
+- Office Assistant
+
+Design:
+- Icons use karo (computer icon)
+
+Animation:
+- Fade + Zoom`,
+img:"https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+},
+
+{
+title:"Slide 5: Conclusion",
+content:`Likho:
+COPA ek best course hai jo computer skills deta hai aur job help karta hai.
+
+Animation:
+- Slow fade
+
+Last slide:
+Thank You`,
+img:"https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+}
+];
+
+function show(){
+document.getElementById("title").innerText = data[step].title;
+document.getElementById("content").innerText = data[step].content;
+document.getElementById("image").src = data[step].img;
 }
 
 function next(){
-    if(index < slides.length - 1){
-        index++;
-        show(index);
-    }
+if(step < data.length-1){
+step++;
+show();
+}
 }
 
-function prev(){
-    if(index > 0){
-        index--;
-        show(index);
-    }
-}
-
-document.addEventListener("keydown", e => {
-    if(e.key === "ArrowRight") next();
-    if(e.key === "ArrowLeft") prev();
-});
+show();
 </script>
 
 </body>
