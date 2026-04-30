@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motherboard Parts Poster</title>
+
+<style>
+body {
+    margin: 0;
+    background: #0f172a;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    margin: 20px;
+    font-size: 32px;
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+}
+
+.container img {
+    width: 90vw;
+    max-width: 1000px;
+    border-radius: 10px;
+}
+
+/* Marker Style */
+.marker {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: red;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+
+.marker:hover::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Motherboard Parts & Ports</h1>
+
+<div class="container">
+
+    <!-- Image -->
+    <img src="motherboard.jpg" alt="Motherboard">
+
+    <!-- Markers -->
+
+    <div class="marker" style="top:40%; left:60%;" 
+         data-label="CPU Socket (Processor)"></div>
+
+    <div class="marker" style="top:65%; left:65%;" 
+         data-label="RAM Slots (Memory)"></div>
+
+    <div class="marker" style="top:50%; left:30%;" 
+         data-label="PCIe Slots (GPU Slot)"></div>
+
+    <div class="marker" style="top:75%; left:55%;" 
+         data-label="24-Pin Power Connector"></div>
+
+    <div class="marker" style="top:15%; left:75%;" 
+         data-label="CPU Power Connector (8-Pin)"></div>
+
+    <div class="marker" style="top:30%; left:35%;" 
+         data-label="CMOS Battery"></div>
+
+    <div class="marker" style="top:80%; left:25%;" 
+         data-label="SATA Ports"></div>
+
+    <div class="marker" style="top:20%; left:50%;" 
+         data-label="VRM Heatsink"></div>
+
+    <div class="marker" style="top:60%; left:40%;" 
+         data-label="Chipset (TUF Gaming)"></div>
+
+</div>
+
+</body>
+</html>
